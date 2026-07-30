@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Eula() {
   return (
@@ -72,14 +72,14 @@ export default function Eula() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Privacy</h2>
             <p className="mb-4">
               Your use of the App is also subject to our Privacy Policy. You can read it here:{' '}
-              <Link to="/privacy">Privacy Policy</Link>.
+              <Link href="/privacy">Privacy Policy</Link>.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Terms of Service</h2>
             <p className="mb-4">
-              Additional terms may apply to your use of the service. You can read them here: <Link to="/terms">Terms of Service</Link>.
+              Additional terms may apply to your use of the service. You can read them here: <Link href="/terms">Terms of Service</Link>.
             </p>
           </section>
 
@@ -126,4 +126,3 @@ export default function Eula() {
     </div>
   );
 }
-

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Heart } from 'lucide-react';
 
 export default function NotFound() {
@@ -11,7 +11,7 @@ export default function NotFound() {
         We couldn't find the page you're looking for. It might have ghosted us.
       </p>
       <Link
-        to="/"
+        href="/"
         className="bg-pink-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-pink-700 transition-colors"
       >
         Return Home

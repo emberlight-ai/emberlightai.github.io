@@ -1,26 +1,47 @@
-import React from 'react';
-import { Brain } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+
+function FooterWordmark() {
+  return (
+    <span className="footer-wordmark">
+      <span className="footer-wordmark-mark" aria-hidden="true" />
+      Emberlight
+    </span>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-12 px-4 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center">
-          <div className="flex items-center mb-6">
-            <Brain className="w-8 h-8 text-blue-600" />
-            <span className="ml-2 text-2xl font-bold">Emberlight AI</span>
+    <footer className="site-footer">
+      <div className="site-container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <Link href="/" aria-label="Emberlight home"><FooterWordmark /></Link>
+            <p>Human expertise, compiled into software.</p>
+            <a className="footer-mail" href="mailto:ceo@emberlightai.com">Say hello <ArrowUpRight size={15} /></a>
           </div>
-          <nav className="flex flex-wrap justify-center gap-8 mb-8">
-            <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-            {/* <Link to="/team" className="text-gray-600 hover:text-blue-600 transition-colors">Team</Link> */}
-            <a href="mailto:ceo@emberlightai.com" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-            <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-            <Link to="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">Terms of Service</Link>
-            <Link to="/eula" className="text-gray-600 hover:text-blue-600 transition-colors">EULA</Link>
-          </nav>
-          <p className="text-gray-600 text-center">© 2026 Emberlight AI. All rights reserved.</p>
+          <div className="footer-col">
+            <strong>Product</strong>
+            <a href="https://apps.apple.com/us/app/amber-find-soul-mate/id6757027267">Amber for iOS</a>
+            <a href="/#creator">Twin Editor</a>
+            <a href="/#faq">FAQ</a>
+          </div>
+          <div className="footer-col">
+            <strong>Experts</strong>
+            <a href="/#creator">Become a creator</a>
+            <a href="mailto:ceo@emberlightai.com?subject=Creator beta">Creator beta</a>
+            <a href="/#coaches">Live coaches</a>
+          </div>
+          <div className="footer-col">
+            <strong>Company</strong>
+            <Link href="/about">About</Link>
+            <a href="mailto:ceo@emberlightai.com">Contact</a>
+            <Link href="/privacy">Privacy</Link>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 Emberlight AI · Palo Alto, CA</span>
+          <div><Link href="/terms">Terms</Link><Link href="/eula">EULA</Link><span>Made with Amber</span></div>
         </div>
       </div>
     </footer>
